@@ -14,13 +14,10 @@ class Reader {
 
       if (strpos($value, "?") !== FALSE) {
         if (empty($datenarray->antworten)) {
-          $datenarray = new Datenarray();
-          $datenarray->fragen = $value;
-        } else {
           $meineDaten[] = $datenarray;
-          $datenarray = new Datenarray();
-          $datenarray->fragen = $value;
         }
+        $datenarray = new Datenarray();
+        $datenarray->fragen = $value;
       } else {
         $datenarray->antworten[] = $value;
       }
