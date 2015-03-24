@@ -13,7 +13,7 @@ class Reader {
     foreach ($zeilen as $value) {
 
       if (strpos($value, "?") !== FALSE) {
-        if (empty($datenarray->antworten)) {
+        if (!empty($datenarray->antworten)) {
           $meineDaten[] = $datenarray;
         }
         $datenarray = new Datenarray();
